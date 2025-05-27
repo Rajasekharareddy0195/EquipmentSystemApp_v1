@@ -97,7 +97,9 @@ entity SampleEntity {
 }
 
 
-entity Demogitcheck_featureavinash  {
+entity Demogitcheck {
     key ID   : Int16;
         type : String;
 }
+
+ 

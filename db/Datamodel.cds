@@ -97,7 +97,7 @@ entity SampleEntity {
 }
 
 
-entity Demo {
+entity Demogitcheck {
     key ID   : Int16;
         type : String;
 }

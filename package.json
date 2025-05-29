@@ -15,9 +15,11 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-adminequipmentapp": "cds watch --open adminequipmentapp/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-adminequipmentapp": "cds watch --open adminequipmentapp/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-employeeequipapp": "cds watch --open employeeequipapp/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "sapux": [
-    "app/adminequipmentapp"
+    "app/adminequipmentapp",
+    "app/employeeequipapp"
   ]
 }

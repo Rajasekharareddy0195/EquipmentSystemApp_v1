@@ -1,0 +1,3 @@
+### Reading Equipement data from Employee Service
+
+GET http://localhost:4004/odata/v4/employee/Equipments

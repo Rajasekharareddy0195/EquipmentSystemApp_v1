@@ -7,16 +7,52 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^8",
-    "express": "^4"
+    "express": "^4",
+    "@cap-js/hana": "^1",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
+    "@cap-js/cds-types": "^0.10.0",
     "@cap-js/sqlite": "^1",
-    "@cap-js/cds-types": "^0.10.0"
+    "@sap/cds-dk": "^8"
   },
   "scripts": {
     "start": "cds-serve",
     "watch-adminequipmentapp": "cds watch --open adminequipmentapp/webapp/index.html?sap-ui-xx-viewCache=false",
     "watch-employeeequipapp": "cds watch --open employeeequipapp/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "employeeTester@gmail.com": {
+              "password": "12345",
+              "roles": [
+                "employeeUser"
+              ]
+            },
+            "adminTester@gmail.com": {
+              "password": "12345",
+              "roles": [
+                "adminUser"
+              ]
+            }
+          }
+        }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "html5-runtime": true,
+      "destinations": true,
+      "workzone": true
+    },
+    "sql": {
+      "native_hana_associations": false
+    }
   },
   "sapux": [
     "app/adminequipmentapp",

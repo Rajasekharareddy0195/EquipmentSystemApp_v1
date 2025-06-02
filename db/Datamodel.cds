@@ -102,4 +102,3 @@ entity Demogitcheck {
         type : String;
 }
 
- 

@@ -7,5 +7,14 @@
     // "csv (semicolon)",
     // "tab",
     // "tsv"
+  ],
+  "SAP HANA Database Explorer.UseObjectsDefinitionForSqlGeneration.RetentionTime": 7,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "equipment_main",
+      "database": "${workspaceFolder:code_manual_app_main}//home/user/projects/code_manual_app_main"
+    }
   ]
 }

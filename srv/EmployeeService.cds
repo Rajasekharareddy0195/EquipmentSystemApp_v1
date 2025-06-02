@@ -1,0 +1,16 @@
+using { Equipment.system.app as service } from '../app/services';
+
+
+service EmployeeService {
+
+    entity MyTasks as projection on service.Tasks;
+    entity MyIssues as projection on service.Issues;
+    entity Equipments as projection on service.Equipments;
+
+    type ArrayEmpData {
+        taskid : String;
+    };
+
+    action updateTaskStatusCompleted(taskData : array of ArrayEmpData) returns String;
+    
+}
